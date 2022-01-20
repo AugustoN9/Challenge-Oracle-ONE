@@ -12,12 +12,17 @@ html{
 
 header{
     width: 100%;
-    height: 10%;
+    height: 12%;
     color: white;
-    font-family: Cambria, Cochin, Georgia;
+    font-family:'Jura-Light';
     font-size: 60px;
     text-align: center;
     background-color: rgba(35, 40, 45, 0.8);
+}
+
+header p {
+    font-family: 'Gelio';
+    font-size: 26px;
 }
 
 body{
@@ -33,7 +38,7 @@ h1{
 .campo1{
     float: left;
     background-color: rgba(35, 40, 45, 0.9);
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 6%;
     margin-right: 2%;
     padding: 15px;
@@ -95,5 +100,20 @@ footer{
     font-family: Cambria, Cochin, Georgia;
     font-style: italic;
     color: white;
-}  
+} 
+
+@font-face {
+    font-family: 'Jura-Light';
+    src: url('/font/Jura-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Khepri';
+    src: url('/font/Khepri-Round\ Rough.otf');
+}
+
+@font-face {
+    font-family: 'Gelio';
+    src: url('/font/Gelio Kleftiko.ttf');
+}
 
