@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Oracle ONE Encrypt-Decrypt</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    
+</head>
+<body>
+    <header>CRIPTOGRAFIA DE TEXTO</header>
+    <div class="campo1">
+        <h1>Cripton</h1>    
+          <div class="form-campo">
+            <label for="exampleInputEmail1">Digite uma palavra ou texto para codificar</label>
+            <input type="text" class="form-control" id="en" aria-describedby="" placeholder="Digite aqui">
+            <label for="exampleInputEmail1">Palavra ou texto codificado</label>
+            <input type="text" class="form-control" id="de" aria-describedby="" placeholder="">
+          </div>
+          
+          <button onclick="encrypt()" class="botao">Codificar</button>
+          <button onclick="copiar()" class="botao">Copiar</button>
+          <button onclick="limpatudo()" class="botao">Limpar</button>
+    </div>
+
+    <div class="campo1">
+        <h1>Decripton</h1>       
+          <div class="form-campo">
+            <label for="exampleInputEmail1">Código para descodificar</label>
+            <input type="text" class="form-control" id="des" aria-describedby="" placeholder="">
+            <label for="exampleInputEmail1">Palavra ou texto descodificado</label>
+            <input type="text" class="form-control" id="desc" aria-describedby="" placeholder="">
+          </div>
+        
+          <button onclick="decrypt()" class="botao">Descodificar</button>
+          <button onclick="limpatudo()" class="botao">Limpar</button>
+    </div>   
+    <script>
+      var encodedString;
+      function encrypt(){
+              var baseString = document.getElementById("en").value;
+              encodedString = window.btoa(baseString);
+              document.getElementById("de").value = encodedString;
+              limpa("en");
+      }
+
+      function decrypt(){
+              var decodedString = window.atob(encodedString);
+              document.getElementById("des").value = encodedString;
+              document.getElementById("desc").value = decodedString;              
+      }
+
+      function limpa(campo){       
+              document.getElementById(campo).value = '';
+      }
+
+      function limpatudo(){              
+              var input = document.getElementById("en").value;
+              if(input != ''){
+                  document.getElementById("en").value = '';
+              }
+              var input = document.getElementById("de").value;
+              if(input != ''){
+                  document.getElementById("de").value = '';
+              }    
+              var input = document.getElementById("des").value;
+              if(input != ''){
+                  document.getElementById("des").value = '';
+              }  
+              var input = document.getElementById("desc").value;
+              if(input != ''){
+                  document.getElementById("desc").value = '';
+              }         
+      }
+
+      function copiar(){       
+              var copy = document.getElementById("de").value;
+              document.getElementById("des").value = copy;
+              limpa("de");
+      }
+      //fonte: https://www.youtube.com/watch?v=6uuSceftOe4  
+    </script>
+    <footer>
+      <h2>Desenvolvido por @auguston9 Analista Augusto C. C. Lopez </h2>
+      <p>janeiro 2022</p>
+    </footer>
+</body>
+</html>

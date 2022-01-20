@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("/image/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    grid-template-rows: 20vh 70vh 10vh;
+}
+
+header{
+    background: yellow;
+    height: 100px;
+}
+
+main{
+    background: blue;
+    height: 100px;
+}
+
+aside{
+    background: green;
+    height: 100px;
+}
+
+footer{
+    background: red;
+    height: 100px;
+}
+
+
