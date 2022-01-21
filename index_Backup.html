@@ -38,40 +38,18 @@
     </div>   
     <script>
       var encodedString;
-      
       function encrypt(){
               var baseString = document.getElementById("en").value;
-              encodedString = baseString.replace(/a/g , "c1");              
-              encodedString = encodedString.replace(/e/g , "c2");  
-              encodedString = encodedString.replace(/i/g , "c3");  
-              encodedString = encodedString.replace(/o/g , "c4");  
-              encodedString = encodedString.replace(/u/g , "c5"); 
-              var baseString2 = encodedString.replace(/c1/g , "ai");
-              encodedString = baseString2.replace(/c2/g , "enter");
-              encodedString = encodedString.replace(/c3/g , "imes");      
-              encodedString = encodedString.replace(/c4/g , "ober");      
-              encodedStringEnd = encodedString.replace(/c5/g , "ufat");    
-
-              document.getElementById("de").value = encodedStringEnd;
+              encodedString = window.btoa(baseString);
+              document.getElementById("de").value = encodedString;
               limpa("en");
       }
 
       function decrypt(){
-              var decodedString = document.getElementById("des").value;
-              decodedString = decodedString.replace(/ai/g,"c1");
-              decodedString = decodedString.replace(/enter/g,"c2");
-              decodedString = decodedString.replace(/imes/g,"c3");
-              decodedString = decodedString.replace(/ober/g,"c4");
-              decodedString = decodedString.replace(/ufat/g,"c5");
-              var baseString2 = decodedString.replace(/c1/g , "a"); 
-              baseString2 = baseString2.replace(/c2/g , "e");  
-              baseString2 = baseString2.replace(/c3/g , "i");  
-              baseString2 = baseString2.replace(/c4/g , "o");
-              baseString2 = baseString2.replace(/c5/g , "u");  
-
-              document.getElementById("desc").value = baseString2;              
+              var decodedString = window.atob(encodedString);
+              document.getElementById("des").value = encodedString;
+              document.getElementById("desc").value = decodedString;              
       }
-
 
       function limpa(campo){       
               document.getElementById(campo).value = '';
