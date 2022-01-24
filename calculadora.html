@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/estilo_calc.css">    
 </head>
 <body>
+    <div class="btn">
+        <img src="image/icons8-sun-48.png">
+        <img src="image/icons8-ok-48.png">
+    </div>
     <div class="container">
         <form class="calculator" name="calc">
             <input type="text" class="value" readonly name="txt">
@@ -38,12 +42,13 @@
 
         </form>
     </div>
-    <div class="pikachu"><img src="image/pikachu.png"></div>
+    <div class="pikachu">   
+    </div>
    <script>
-       function calcularSqrt(){
-           var num = document.getElementById(".num").value;
-           var sqrt = Math.sqrt(num);
-           return sqrt;
+       let body = document.querySelector('body');
+       let btn = document.querySelector('.btn');
+       btn.onclick = function(){
+           body.classList.toggle('sol')
        }
    </script>
 </body>
