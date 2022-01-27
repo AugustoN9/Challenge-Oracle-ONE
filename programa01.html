@@ -1,0 +1,139 @@
+<canvas id="tela" width="600" height="400"></canvas>
+<canvas id="tela2" width="600" height="400"></canvas>
+<canvas id="cabecaDoCreeper" width="350" height="300"></canvas>
+<canvas id="bandeira" width="600" height="400"></canvas>
+<canvas id="alemanha" width="600" height="400"></canvas>
+<canvas id="japao" width="600" height="400"></canvas>
+<canvas id="bandeiraBrasil" width="600" height="400"></canvas>
+
+
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightblue';
+    pincel.fillRect(0, 0 , 600, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(0, 0 , 100, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(100, 0 , 100, 400);
+
+    pincel.fillStyle = 'orange';
+    pincel.fillRect(200, 200 , 400, 200);
+
+    pincel.fillStyle = 'white';
+    pincel.fillRect(200, 200 , 400, 100);
+
+    pincel.fillStyle = 'brown';
+    pincel.fillRect(500, 0 , 100, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(0, 400);
+    pincel.lineTo(600, 400);
+    pincel.fill();
+
+    var tela2 = document.querySelector('#tela2');
+    var pincel2 = tela2.getContext('2d');
+
+    pincel2.fillStyle = 'lightblue';
+    pincel2.fillRect(0, 0 , 600, 400);
+
+    pincel2.fillStyle = 'navy';
+    pincel2.beginPath();
+    pincel2.moveTo(300, 200);
+    pincel2.lineTo(0, 0);
+    pincel2.lineTo(600, 0);
+    pincel2.fill();
+
+    pincel2.fillStyle = '#3846ff';
+    pincel2.beginPath();
+    pincel2.arc(300, 200, 50, 0 , 2 * 3.14);
+    pincel2.fill();
+
+    var Creeper = document.querySelector('#cabecaDoCreeper');
+    var pincelCreeper = Creeper.getContext('2d');
+
+    pincelCreeper.fillStyle = 'darkgreen';
+    pincelCreeper.fillRect(0, 0 , 350, 300);
+
+    pincelCreeper.fillStyle = 'black';
+    pincelCreeper.fillRect(50, 50 , 90, 90);
+
+    pincelCreeper.fillRect(210, 50 , 90, 90);
+
+    pincelCreeper.fillRect(140, 140 , 70, 100);
+
+    pincelCreeper.fillRect(100, 190 , 40, 300);
+
+    pincelCreeper.fillRect(210, 190 , 40, 300);
+   
+    pincelCreeper.fill();
+
+    var bandeira = document.querySelector('#bandeira');
+    var pincelband = bandeira.getContext('2d');
+
+    pincelband.fillStyle = 'white';
+    pincelband.fillRect(0, 0 , 600, 400);
+
+    pincelband.fillStyle = 'green';
+    pincelband.fillRect(0, 0 , 200, 400);
+
+    pincelband.fillStyle = 'red';
+    pincelband.fillRect(400, 0 , 600, 400);
+
+    var alemanha = document.querySelector('#alemanha');
+    var germany = alemanha.getContext('2d');
+
+    germany.fillStyle = 'black';
+    germany.fillRect(0, 0 , 600, 133);
+
+    germany.fillStyle = 'red';
+    germany.fillRect(0, 133 , 600, 266);
+
+    germany.fillStyle = 'yellow';
+    germany.fillRect(0, 266 , 600, 400);
+
+    var japao = document.querySelector('#japao');
+    var pinceljapa = japao.getContext('2d');
+
+    pinceljapa.fillStyle = 'white';
+    pinceljapa.fillRect(0, 0 , 600, 400);
+    //pinceljapa.fillStroke = 'black';
+    //pinceljapa.strokeReact(0, 0, 600, 400);
+
+    pinceljapa.fillStyle = 'red';
+    pinceljapa.beginPath();
+    pinceljapa.arc(300, 200, 120, 0 , 2 * 3.14);
+    pinceljapa.fill();
+
+    var bandeiraBr = document.querySelector('#bandeiraBrasil');
+    var pincelBr = bandeiraBr.getContext('2d');
+  
+    pincelBr.fillStyle = 'green';
+    pincelBr.fillRect(0, 0 , 600, 400);
+
+    pincelBr.fillStyle = 'yellow';
+    pincelBr.beginPath();
+    pincelBr.moveTo(300, 50);
+    pincelBr.lineTo(50, 200);
+    pincelBr.lineTo(550, 200);    
+    pincelBr.moveTo(300, 350);
+    pincelBr.lineTo(550, 200);
+    pincelBr.lineTo(50, 200);
+    pincelBr.fill();
+
+
+    pincelBr.fillStyle = 'darkblue';
+    pincelBr.beginPath();
+    pincelBr.arc(300, 200, 100, 0 , 2 * 3.14);   
+    pincelBr.fill();
+         
+
+
+</script>
