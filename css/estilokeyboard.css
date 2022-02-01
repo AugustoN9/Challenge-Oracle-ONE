@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-image: url("../image/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;    
+}
+
+header{
+    width: 100%;
+    height: 12%;
+    color: white;
+    font-family:'Jura-Light';
+    font-size: 60px;
+    text-align: center;
+    background-color: rgba(35, 40, 45, 0.8);
+}
+
+header p {
+    font-family: 'Gelio';
+    font-size: 26px;
+}
+
+body{
+    background-color: rgba(54, 43, 202, 0.5);
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 25px;
+}
+
+h1{
+    color: white;
+}
+
+.campo1{
+    float: left;
+    background-color: rgba(35, 40, 45, 0.9);
+    margin-top: 5%;
+    margin-left: 6%;
+    margin-right: 2%;
+    padding: 15px;
+    width: 36%;
+    height: 320px;
+    border: 4px solid whitesmoke;
+    border-radius: 12px;
+}
+
+.campo1 label{
+    color: white;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-campo input[type="text"]{
+    width: 467px;
+    height: 36px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 9px;
+    background: rgba(66, 66, 66, 0.5);
+    color: white;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botao {
+    font-size:15px;
+    font-family:Arial;
+    margin: 30px 10px 5px 10px;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#4e6096;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    box-shadow: 0px 0px 0px 2px #9fb4f2;
+    text-shadow: 0px 1px 0px #283966;
+    background:linear-gradient(rgb(120, 146, 194), #476e9e);
+  }
+  
+  .botao:hover {
+    background: linear-gradient(#476e9e, rgb(120, 146, 194));
+  }
+
+footer{
+    position: fixed;
+    height: 70px;
+    background-color: rgba(35, 40, 45, 0.8);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia;
+    font-style: italic;
+    color: white;
+} 
+
+@font-face {
+    font-family: 'Jura-Light';
+    src: url('/font/Jura-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Khepri';
+    src: url('/font/Khepri-Round\ Rough.otf');
+}
+
+@font-face {
+    font-family: 'Gelio';
+    src: url('/font/Gelio Kleftiko.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+.keyboard_wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    width: 740px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow:
+        -4px -4px 8px #fff,
+        4px 4px 8px #0002;
+}
+
+.keyboard_wrapper .display {
+    position: relative;
+    font-size: 18px;
+    font-family: inherit;
+    height: 100px;
+    border-radius: 15px;
+    height: 100px;
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 2px inset #fff;
+    white-space: pre-wrap;
+    box-shadow:
+        inset 2px 2px 5px #0002,
+        inset -2px -2px 5px #fff;
+}
+
+.keyboard_wrapper .display::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(45deg, #ffffff52, #0000001a);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.keyboard_wrapper .key {
+    margin-top: 20px;
+    user-select: none;
+}
+
+.keyboard_wrapper .key .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.keyboard_wrapper .key .row span {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: 8px;
+    box-shadow:
+        3px 3px 6px #0002,
+        -3px -3px 6px #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.keyboard_wrapper .key .row span#enter {
+    width: 100px;
+      
+}
+
+.keyboard_wrapper .key .row span.active,
+.keyboard_wrapper .key .row span:hover {
+    border-color: rgb(38, 7, 151);
+    color: rgb(139, 110, 207);
+}
+
+.keyboard_wrapper .key .row span.active,
+.keyboard_wrapper .key .row span:active {
+    box-shadow:
+        inset 3px 3px 6px #0002,
+        inset -3px -3px 6px #fff;
+}
+
+.keyboard_wrapper .key.uppercase {
+    text-transform: capitalize;
+}

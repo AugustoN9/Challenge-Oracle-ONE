@@ -28,7 +28,7 @@
         <h1>Decripton</h1>       
           <div class="form-campo">
             <label for="exampleInputEmail1">Código para descodificar</label>
-            <input type="text" class="form-control" id="des" aria-describedby="" placeholder="">
+            <input type="text" class="form-control" id="des" aria-describedby="" placeholder="" >
             <label for="exampleInputEmail1">Palavra ou texto descodificado</label>
             <input type="text" class="form-control" id="desc" aria-describedby="" placeholder="">
           </div>
@@ -37,9 +37,11 @@
           <button onclick="limpatudo()" class="botao">Limpar</button>
     </div>   
     <script>
+
       var encodedString;
       
       function encrypt(){
+
               var baseString = document.getElementById("en").value;
               encodedString = baseString.replace(/a/g , "c1");              
               encodedString = encodedString.replace(/e/g , "c2");  
