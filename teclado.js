@@ -25,7 +25,7 @@ if(keys && keyPad && display)
                 {
                     display.innerText += this.dataset.key.toUpperCase();
                 }else{
-                    display.innerText += this.dataset.key.toLowerCase();
+                    display.innerText += this.dataset.key.toUpperCase();
                 }
             }
         });
