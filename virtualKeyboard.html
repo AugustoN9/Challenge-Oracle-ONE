@@ -11,25 +11,45 @@
 <body>
 
     <div class="keyboard_wrapper">
+
+        <div id="palavrasecreta" class="secreta" style="display: none;">
+            
+        </div>
+
+        <div class="key">    
+            <div class="row">
+                <span ><input type="text" id="p" class="palavra" value="A" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="B" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="A" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="C" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="A" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="X" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="I" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="A" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="p" class="palavra" value="A" style="display:inline" disabled="" /></span>
+                <span ><input type="text" id="L10" class="palavra" value="" style="display:inline" disabled="" /></span>
+            </div>
+        </div>
+
         <pre class="display"></pre>
 
         <div class="key">
             <div class="row">
-                <span data-key="q">Q</span>
+                <span data-key="Q">Q</span>
                 <span data-key="w">W</span>
                 <span data-key="e">E</span>
                 <span data-key="r">R</span>
                 <span data-key="t">T</span>
                 <span data-key="y">Y</span>
                 <span data-key="u">U</span>
-                <span data-key="i">I</span>
+                <span data-key="I"><button id="tecla_i" class="tecla_i" value="I" onclick="" style="display:inline" >I</button></span>
                 <span data-key="o">O</span>
                 <span data-key="p">P</span>
             </div>
 
             <div class="row">
-                <span data-key="a">A</span>
-                <span data-key="s">S</span>
+                <span data-key="A"><button id="tecla_a" class="tecla_a" value="A" onclick="" style="display:inline" >A</button></span>
+                <span data-key="S"><button id="tecla_s" class="tecla_s" value="S" onclick="" style="display:inline" >S</button></span>
                 <span data-key="d">D</span>
                 <span data-key="f">F</span>
                 <span data-key="g">G</span>
@@ -44,10 +64,9 @@
                 <span data-key="x">X</span>
                 <span data-key="c">C</span>
                 <span data-key="v">V</span>
-                <span data-key="b">B</span>
+                <span data-key="B"><button id="tecla_b" class="tecla_b" value="B" onclick="" style="display:inline" >B</button></span>
                 <span data-key="n">N</span>
                 <span data-key="m">M</span>
-                <span data-key="" id="enter">Enter</span>
 
             </div>
         </div>
@@ -57,4 +76,26 @@
     </footer>
     
 </body>
+<script>
+    /*
+    var palavra = 'ABACAXI';
+    var palavrasecreta = document.querySelector("#palavrasecreta");
+    palavrasecreta.innerText = palavra;
+
+    console.log(palavrasecreta.innerText);
+ 
+
+    var buscaletra = 'A';
+    var string = palavrasecreta.innerText;
+    var cont = 0;
+
+    for(var i = 0; i < string.length; i++){
+        if(buscaletra == string[i]){
+            cont = ++cont;
+        }
+    }
+    console.log(cont);
+    */
+    
+</script>
 </html>
