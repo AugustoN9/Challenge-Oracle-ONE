@@ -31,8 +31,6 @@ if(keys && keyPad && display)
         });
     });
 }
-<<<<<<< HEAD
-
 
     document.querySelectorAll("button").forEach(function(button){
         button.addEventListener("click", function(event){
@@ -101,5 +99,4 @@ function esconde(tecla) {
      }    
      */    
  }
-=======
->>>>>>> 77179ad0668fc6ebdccfdecc244b319df768d533
+
