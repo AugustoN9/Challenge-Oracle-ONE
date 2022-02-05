@@ -11,7 +11,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background-image: url("../image/matematica.png");
-    -background-color: chartreuse;
+    -background-color: rgba(30, 9, 82, 0.9);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -19,8 +19,8 @@ body{
 }
 
 body.sol{
-    background-image: url("../image/matematica2.png");
-    -background: #060635;
+    background-image: url("../image/fundo3.jpg");
+    
 }
 
 .pikachu {
@@ -114,7 +114,7 @@ body.sol .btn img:nth-child(2){
     height: 100px;
     left: 10px;
     width: calc(100% - 20px );
-    border: none;
+    border: 1px solid white;
     outline: none;
     -background: #a7af7c;
     background: black;
