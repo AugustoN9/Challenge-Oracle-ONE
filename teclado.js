@@ -2,55 +2,48 @@ let keys    = document.querySelectorAll('.keyboard_wrapper .key .row span'),
     keyPad  = document.querySelector('.keyboard_wrapper .key'),
     display = document.querySelector('.keyboard_wrapper .display');
 
-if(keys && keyPad && display)
-{
-    let capsLockMode = false;
-    keys.forEach(key=>
-    {
-        key.addEventListener('click', function()
-        {
-            // console.log(this.innerText);
-            if(this.classList.contains('caps'))
-            {
-                this.classList.toggle('active');
-                keyPad.classList.toggle('uppercase');
+document.querySelectorAll("button").forEach(function(button){
+    button.addEventListener("click", function(event){
 
-                capsLockMode ? capsLockMode = false : capsLockMode = true;
-            }
-            else if (this.classList.contains('backspace')){
-                let str = display.innerText;
-                display.innerText = str.substring(0, (str.length-1));
-            }else{
-                if(capsLockMode)
-                {
-                    display.innerText += this.dataset.key.toUpperCase();
-                }else{
-                    display.innerText += this.dataset.key.toUpperCase();
-                }
-            }
-        });
-    });
+        const el = event.target || event.srcElement;
+        const id = el.id;
+        var idSel = id;
+        console.log(idSel);
+        if(idSel != null){              
+            confereLetra(idSel);                
+        }
+    })
+})
+
+
+var palavras = ['abacaxi','uva','laranja','melancia','banana','maca','bergamota','coco','mamao'];
+const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
+var indiceAleat = random(0, palavras.length);
+var palavra = palavras[indiceAleat]
+palavra = palavra.toUpperCase();
+console.log('Palavra Aleatoria '+palavra)
+
+function preencheCampo(string){
+    let caracter = string.split('');
+
+    for(i = 0; i < string.length; i++){
+       var exibepalavra = document.getElementById("letra").value;
+       exibepalavra.innerText = caracter[i];
+       console.log(caracter[i])
+
+    }
+
+
 }
 
-    document.querySelectorAll("button").forEach(function(button){
-        button.addEventListener("click", function(event){
-
-            const el = event.target || event.srcElement;
-            const id = el.id;
-            var idSel = id;
-            console.log(idSel);
-            if(idSel != null){
-               
-                confereLetra(idSel);                
-            }
-        })
-    })
+preencheCampo(palavra);
 
 function confereLetra(id){
 
         var teclado = document.getElementById(id).value;
 
-        var palavra = 'ABACAXI';
+        //preencheCampo(palavra);
+
         var palavrasecreta = document.querySelector("#palavrasecreta");
         palavrasecreta.innerText = palavra;
 
@@ -68,11 +61,14 @@ function confereLetra(id){
             esconde(id);
             exibirLetraSecreta();
             console.log('A letra '+teclado+' foi encontrada '+cont+' vezes');  
+            alert('PARABENS! A palavra secreta possui a letra escolhida '+teclado)
         }else{
-            exibirLetraSecreta();
+            alert('VOCE ERROU! A palavra secreta NÃO POSSUI a letra escolhida '+teclado)
         }
          
 }
+
+
 
 function exibirLetraSecreta(){
 

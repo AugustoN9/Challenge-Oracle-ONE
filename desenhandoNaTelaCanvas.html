@@ -36,11 +36,18 @@
     //pincel.fillStyle = 'navy';
     pincel.fillRect(100, 450, 200, 100);
 
-    pincel.beginPath();
-    pincel.moveTo(150, 82);
-    pincel.lineTo(150, 450);
-    pincel.stroke();
 
+    function part01(){
+
+        pincel.beginPath();
+        pincel.moveTo(150, 82);
+        pincel.lineTo(150, 450);
+        pincel.stroke();
+
+    }
+
+    
+/*
     pincel.beginPath();
     pincel.moveTo(147, 82);
     pincel.lineTo(302, 82);
@@ -96,6 +103,16 @@
     pincel.lineTo(330, 310);
     pincel.stroke();
    
+*/
 
+var acertou = false
+
+function initpart01(){
+    if( acertou == true){
+        setInterval(part01, 500)
+    }
+}
+
+initpart01();
     
 </script>

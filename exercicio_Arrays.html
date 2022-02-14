@@ -1,0 +1,119 @@
+<script>
+
+var palavras3 = ['abacaxi','uva','laranja','melancia','banana','maça','bergamota','coco','mamao','jabuticaba'];
+var palavras = ['abacaxi','uva','laranja'];
+var palavras2 = ['abacaxi','uva','laranja','melancia','banana','maça'];
+var palavras4 = ['abacaxi','uva','laranja','melancia','banana','maça','bergamota'];
+
+
+
+console.log(palavras);
+console.log(palavras[0]);
+console.log(palavras[palavras.length - 1]);
+palavras = palavras.sort();
+console.log(palavras);
+
+palavras = palavras.reverse();
+console.log(palavras);
+
+var n = palavras.length;
+var tam = Array()
+
+for(var i = 0; i < n; i++){
+    tam[i] = palavras[i].length
+}
+
+console.log(tam);
+
+
+var tamanho = palavras.length;
+var maiorPalavra = 0;
+var maiorString = '';
+var menorPalavra = 0;
+var menorString = '';
+
+for(var i = 0; i < tamanho; i++){
+    tam = palavras[i].length; 
+    if(tam > maiorPalavra){
+        maiorPalavra = tam;
+        indicepalavra = i;
+        maiorString = palavras[indicepalavra];
+    }
+    
+}
+
+
+console.log(palavras[0]);
+//console.log(palavras[6]+' '+palavras[6].length);
+console.log('O Maior elemento da lista eh '+maiorString+' [ '+maiorString.length+' ]');
+//console.log('O Menor elemento da lista eh '+menorString);
+
+for(i = 0; i < palavras.length; i++){
+    console.log((i+1)+' '+palavras[i]+' indice [ '+i+' ] tamanho da string [ '+palavras[i].length+' ]');
+}
+
+function imprimirMaiorMenorString(){
+    const n = Number(prompt('Quantos elementos: '))
+    const stringPalavras = Array(n)
+    const tamPalavras = Array()
+    let posicao_maior = 0 
+    let posicao_menor = 0
+    let palavra_maior = ''
+    let palavra_menor = ''
+
+    
+
+    console.log('A lista contem '+ n + ' elementos')
+
+    for(let i = 0; i < n; i++){
+        stringPalavras[i] = prompt('Digite uma palavra: '+i)        
+    }    
+    console.log('Lista digitada '+stringPalavras) 
+
+    
+    for(i = 0; i < n; i++){
+        tamPalavras[i] = stringPalavras[i].length
+           
+        } 
+
+    console.log('Tamanho de cada palavra '+tamPalavras)
+
+    console.log('Este é menor '+ palavra_menor)
+}
+ 
+    
+function imprimirMaiorMenor(){
+    const n = Number(prompt('Quantos elementos: '))
+    const vetor = Array(n)
+
+    for(let i = 0; i < n; i++){
+        vetor[i] = Number(prompt('Elemento: '+i))        
+    }
+
+    let posicao_maior = 0 
+    let posicao_menor = 0
+
+    for(let i = 1; i < n; i++){
+        if(vetor[i] > vetor[posicao_maior]){
+            posicao_maior = i
+        }
+        else if(vetor[i] < vetor[posicao_menor]){
+            posicao_menor = i
+        }
+    }
+
+
+    //console.log(vetor)
+    //console.log('Maior elemento: '+vetor[posicao_maior]+' i: '+ posicao_maior +' '+ maiorSrt)
+    //console.log('Menor elemento: '+vetor[posicao_menor]+' i: '+ posicao_menor +' '+ menorStr)
+
+}
+
+//imprimirMaiorMenor(palavras)
+
+
+
+
+
+    
+</script>
