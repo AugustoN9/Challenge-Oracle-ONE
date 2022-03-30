@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Oracle ONE Encrypt-Decrypt</title>
     <link rel="stylesheet" href="css/estilo.css">
-    
+
 </head>
+
 <body>
-    <header>CRIPTOGRAFIA DE TEXTO<br><p>“DECIPHER ME OR I WILL DEVOUR YOU”</p></header>
+    <header>CRIPTOGRAFIA DE TEXTO<br>
+        <p>“DECIPHER ME OR I WILL DEVOUR YOU”</p>
+    </header>
     <div class="campo1">
-        <h1>Cripton</h1>    
-          <div class="form-campo">
+        <h1>Cripton</h1>
+        <div class="form-campo">
             <label for="exampleInputEmail1">Digite uma palavra ou texto para codificar</label>
             <input type="text" class="form-control" id="en" aria-describedby="" placeholder="Digite aqui">
             <label for="exampleInputEmail1">Palavra ou texto codificado</label>
             <input type="text" class="form-control" id="de" aria-describedby="" placeholder="">
-          </div>
-          
-          <button onclick="encrypt()" class="botao">Codificar</button>
-          <button onclick="copiar()" class="botao">Copiar</button>
-          <button onclick="limpatudo()" class="botao">Limpar</button>
+        </div>
+
+        <button onclick="encrypt()" class="botao">Codificar</button>
+        <button onclick="copiar()" class="botao">Copiar</button>
+        <button onclick="limpatudo()" class="botao">Limpar</button>
     </div>
 
     <div class="campo1">
-        <h1>Decripton</h1>       
-          <div class="form-campo">
+        <h1>Decripton</h1>
+        <div class="form-campo">
             <label for="exampleInputEmail1">Código para descodificar</label>
-            <input type="text" class="form-control" id="des" aria-describedby="" placeholder="" >
+            <input type="text" class="form-control" id="des" aria-describedby="" placeholder="">
             <label for="exampleInputEmail1">Palavra ou texto descodificado</label>
             <input type="text" class="form-control" id="desc" aria-describedby="" placeholder="">
-          </div>
-        
-          <button onclick="decrypt()" class="botao">Descodificar</button>
-          <button onclick="limpatudo()" class="botao">Limpar</button>
-    </div>   
+        </div>
+
+        <button onclick="decrypt()" class="botao">Descodificar</button>
+        <button onclick="limpatudo()" class="botao">Limpar</button>
+    </div>
     <script>
+        var encodedString;
 
-      var encodedString;
-      
-      function encrypt(){
+        function encrypt() {
 
-              var baseString = document.getElementById("en").value;
-              encodedString = baseString.replace(/a/g , "c1");              
-              encodedString = encodedString.replace(/e/g , "c2");  
-              encodedString = encodedString.replace(/i/g , "c3");  
-              encodedString = encodedString.replace(/o/g , "c4");  
-              encodedString = encodedString.replace(/u/g , "c5"); 
-              var baseString2 = encodedString.replace(/c1/g , "ai");
-              encodedString = baseString2.replace(/c2/g , "enter");
-              encodedString = encodedString.replace(/c3/g , "imes");      
-              encodedString = encodedString.replace(/c4/g , "ober");      
-              encodedStringEnd = encodedString.replace(/c5/g , "ufat");    
+            var baseString = document.getElementById("en").value;
+            encodedString = baseString.replace(/a/g, "c1");
+            encodedString = encodedString.replace(/e/g, "c2");
+            encodedString = encodedString.replace(/i/g, "c3");
+            encodedString = encodedString.replace(/o/g, "c4");
+            encodedString = encodedString.replace(/u/g, "c5");
+            var baseString2 = encodedString.replace(/c1/g, "ai");
+            encodedString = baseString2.replace(/c2/g, "enter");
+            encodedString = encodedString.replace(/c3/g, "imes");
+            encodedString = encodedString.replace(/c4/g, "ober");
+            encodedStringEnd = encodedString.replace(/c5/g, "ufat");
 
-              document.getElementById("de").value = encodedStringEnd;
-              limpa("en");
-      }
+            document.getElementById("de").value = encodedStringEnd;
+            limpa("en");
+        }
 
-      function decrypt(){
-              var decodedString = document.getElementById("des").value;
-              decodedString = decodedString.replace(/ai/g,"c1");
-              decodedString = decodedString.replace(/enter/g,"c2");
-              decodedString = decodedString.replace(/imes/g,"c3");
-              decodedString = decodedString.replace(/ober/g,"c4");
-              decodedString = decodedString.replace(/ufat/g,"c5");
-              var baseString2 = decodedString.replace(/c1/g , "a"); 
-              baseString2 = baseString2.replace(/c2/g , "e");  
-              baseString2 = baseString2.replace(/c3/g , "i");  
-              baseString2 = baseString2.replace(/c4/g , "o");
-              baseString2 = baseString2.replace(/c5/g , "u");  
+        function decrypt() {
+            var decodedString = document.getElementById("des").value;
+            decodedString = decodedString.replace(/ai/g, "c1");
+            decodedString = decodedString.replace(/enter/g, "c2");
+            decodedString = decodedString.replace(/imes/g, "c3");
+            decodedString = decodedString.replace(/ober/g, "c4");
+            decodedString = decodedString.replace(/ufat/g, "c5");
+            var baseString2 = decodedString.replace(/c1/g, "a");
+            baseString2 = baseString2.replace(/c2/g, "e");
+            baseString2 = baseString2.replace(/c3/g, "i");
+            baseString2 = baseString2.replace(/c4/g, "o");
+            baseString2 = baseString2.replace(/c5/g, "u");
 
-              document.getElementById("desc").value = baseString2;              
-      }
+            document.getElementById("desc").value = baseString2;
+        }
 
 
-      function limpa(campo){       
-              document.getElementById(campo).value = '';
-      }
+        function limpa(campo) {
+            document.getElementById(campo).value = '';
+        }
 
-      function limpatudo(){              
-              var input = document.getElementById("en").value;
-              if(input != ''){
-                  document.getElementById("en").value = '';
-              }
-              var input = document.getElementById("de").value;
-              if(input != ''){
-                  document.getElementById("de").value = '';
-              }    
-              var input = document.getElementById("des").value;
-              if(input != ''){
-                  document.getElementById("des").value = '';
-              }  
-              var input = document.getElementById("desc").value;
-              if(input != ''){
-                  document.getElementById("desc").value = '';
-              }         
-      }
+        function limpatudo() {
+            var input = document.getElementById("en").value;
+            if (input != '') {
+                document.getElementById("en").value = '';
+            }
+            var input = document.getElementById("de").value;
+            if (input != '') {
+                document.getElementById("de").value = '';
+            }
+            var input = document.getElementById("des").value;
+            if (input != '') {
+                document.getElementById("des").value = '';
+            }
+            var input = document.getElementById("desc").value;
+            if (input != '') {
+                document.getElementById("desc").value = '';
+            }
+        }
 
-      function copiar(){       
-              var copy = document.getElementById("de").value;
-              document.getElementById("des").value = copy;
-              limpa("de");
-      }
-      //fonte: https://www.youtube.com/watch?v=6uuSceftOe4  
+        function copiar() {
+            var copy = document.getElementById("de").value;
+            document.getElementById("des").value = copy;
+            limpa("de");
+        }
+        //fonte: https://www.youtube.com/watch?v=6uuSceftOe4
     </script>
     <footer>
-      <h2>Desenvolvido por @auguston9 Analista Augusto C. C. Lopez </h2>
-      <p>auguston8@hotmail.com</p>
-      <p>janeiro 2022</p>
+        <h2>Desenvolvido por @auguston9 Analista Augusto C. C. Lopez </h2>
+        <p>auguston8@hotmail.com</p>
+        <p>* janeiro 2022 *</p>
     </footer>
 </body>
+
 </html>
